@@ -2,7 +2,7 @@ removeNonUppercase :: String -> String
 removeNonUppercase s = [ c | c <- s, elem c ['A'..'Z'] ]
 
 
-fizzBuzz :: (Integral a, Show a) => a -> [String]
+fizzBuzz :: Int -> [String]
 fizzBuzz n 
   | n < 1     = []
   | otherwise = [ if (mod x 3 == 0 && mod x 5 == 0) then "FizzBuzz"
