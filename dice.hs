@@ -16,8 +16,8 @@ main =
 splitDice :: String -> (Int, Int)
 splitDice s = 
   let t = T.pack s
-      in let (a:b:_) = map (read . T.unpack) (T.splitOn (T.singleton 'd') t) :: [Int]
-         in (a, b)
+      (a:b:_) = map (read . T.unpack) (T.splitOn (T.singleton 'd') t) :: [Int]
+  in  (a, b)
 
 -- rolls xdy and returns a list of the results
 roll :: (Int, Int) -> StdGen -> [Int]
